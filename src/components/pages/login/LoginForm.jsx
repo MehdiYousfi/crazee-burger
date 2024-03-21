@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function LoginForm() {
   // Utilisez useNavigate pour obtenir la fonction de navigation
@@ -34,6 +34,7 @@ export default function LoginForm() {
       <input value={inputValue} onChange={handleChange} type="text" placeholder="Entrez votre prénom..." required />
       {/* Utilisez la fonction de navigation lorsque le bouton est cliqué */}
       <button onClick={handleButtonClick}> Accédez à votre espace</button>
+      <Link to="/order">Vers OrderPage</Link>
     </form>
   );
 }
