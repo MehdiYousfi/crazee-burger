@@ -4,25 +4,26 @@ import { Link, useNavigate } from 'react-router-dom';
 
 export default function LoginForm() {
   // Utilisez useNavigate pour obtenir la fonction de navigation
-  const navigate = useNavigate();
+ 
 
   // STATE
   const [inputValue, setInputValue] = useState("");
+  const navigate = useNavigate()
 
   // COMPORTEMENTS
   const handleSubmit = (event) => { 
     event.preventDefault();
-    alert(`Bonjour ${inputValue}`);
     setInputValue("");
+    navigate(`order/${inputValue}`)
   };
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
   };
 
-  // Déclenchez la navigation lorsque le bouton est cliqué
+  // Déclenche la navigation lorsque le bouton est cliqué
   const handleButtonClick = () => {
-    navigate('/OrderPage');
+    // navigate('/OrderPage');
   };
 
   // AFFICHAGE
@@ -34,7 +35,7 @@ export default function LoginForm() {
       <input value={inputValue} onChange={handleChange} type="text" placeholder="Entrez votre prénom..." required />
       {/* Utilisez la fonction de navigation lorsque le bouton est cliqué */}
       <button onClick={handleButtonClick}> Accédez à votre espace</button>
-      <Link to="/order">Vers OrderPage</Link>
+      
     </form>
   );
 }
