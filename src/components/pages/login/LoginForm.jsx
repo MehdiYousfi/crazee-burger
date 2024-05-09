@@ -39,3 +39,12 @@ export default function LoginForm() {
     </form>
   );
 }
+
+
+/** 4 méthodes pour ajouter du style à un composant
+ * 1: inline style
+ * 2: object style
+ * 3: modules CSS (avec className)
+ * 4: global style (index.css)
+ * Bonus : Styled components
+ */
