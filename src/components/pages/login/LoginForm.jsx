@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import styled from "styled-components"
+import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
+
 
 export default function LoginForm() {
   // Utilisez useNavigate pour obtenir la fonction de navigation
@@ -30,26 +31,23 @@ export default function LoginForm() {
   // AFFICHAGE
   return (
     <LoginFormStyled action="submit" onSubmit={handleSubmit}>
-      <h1>Bienvenue chez nous</h1>
-      <br />
-      <h2>Connectez vous</h2>
-      <input value={inputValue} onChange={handleChange} type="text" placeholder="Entrez votre prénom..." required />
-      {/* Utilisez la fonction de navigation lorsque le bouton est cliqué */}
-      <button onClick={handleButtonClick}> Accédez à votre espace</button>
-      
+      <div>
+        <h1>Bienvenue chez nous</h1>
+        <br />
+        <h2>Connectez vous</h2>
+      </div>
+      <div>
+        <input value={inputValue} onChange={handleChange} type="text" placeholder="Entrez votre prénom..." required />
+        {/* Utilisez la fonction de navigation lorsque le bouton est cliqué */}
+        <button onClick={handleButtonClick}> Accédez à votre espace</button>
+      </div>  
     </LoginFormStyled>
   );
 }
 
-const LoginFormStyled = styled.form`
-border: 1px solid red;
+const LoginFormStyled = styled.div`
+background: green;
+
+
+
 `
-
-
-/** 4 méthodes pour ajouter du style à un composant
- * 1: inline style
- * 2: object style
- * 3: modules CSS (avec className)
- * 4: global style (index.css)
- * Bonus : Styled components
- */
