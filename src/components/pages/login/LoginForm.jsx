@@ -28,9 +28,9 @@ export default function LoginForm() {
   };
 
   // Déclenche la navigation lorsque le bouton est cliqué
-  const handleButtonClick = () => {
+  // const handleButtonClick = () => {
     // navigate('/OrderPage');
-  };
+  // };
 
   // AFFICHAGE
   return (
@@ -55,8 +55,7 @@ export default function LoginForm() {
   );
 }
 
-const LoginFormStyled = styled.div`
-background: green;
+const LoginFormStyled = styled.form`
 text-align: center;
 max-width: 500px;
 min-width:400px;
