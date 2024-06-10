@@ -2,8 +2,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { BsPersonCircle } from "react-icons/bs";
 import { IoChevronForward } from "react-icons/io5";
+import { BsPersonCircle } from 'react-icons/bs';
+import Input from './Input';
 
 
 
@@ -41,10 +42,14 @@ export default function LoginForm() {
         <h2>Connectez vous</h2>
       </div>
       <div>
-        <div className='input-with-icon'>
-        <BsPersonCircle className='icon'/> 
-          <input value={inputValue} onChange={handleChange} type="text" placeholder="Entrez votre prénom" required />
-        </div>
+        <Input 
+        value={inputValue} 
+        onChange={handleChange} 
+        placeholder={"Entrez votre prénom"} 
+        required
+        Icon={<BsPersonCircle className="icon" />}
+        />
+        
         {/* Utilisez la fonction de navigation lorsque le bouton est cliqué */}
         <button className='button-with-icon'>
           <span> Accédez à mon espace</span>
@@ -81,29 +86,7 @@ h2 {
   font-size: 36px;
 }
 
-.input-with-icon{
-  /* border: 1px solid red; */
-  background-color: white;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  padding: 18px 24px;
-  margin: 18px 0; //could be handle in Parent too
 
-  .icon{
- font-size: 15px;
- margin-right: 8px;
- color: #93a2b1;
-
-}
-
-input{
-  border: none;
-  font-size: 15px;
-  color: #17161a;
-}
-
-}
 
 
 .button-with-icon{
