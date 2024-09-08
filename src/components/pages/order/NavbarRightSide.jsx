@@ -13,7 +13,7 @@ export default function NavbarRightSide({username}) {
       </Link>
     </div>
     <div className="picture"></div> */}
-    <Profile/>
+    <Profile username={username}/>
   </NavbarRightSideStyled>
   )
 }
