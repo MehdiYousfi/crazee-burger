@@ -10,8 +10,12 @@ const [menu, setMenu] = useState(fakeMenu2);
 return (
   <MenuStyled className="menu">
     {menu.map((produit) => {
-      return <Product title={produit.title} imageSource={produit.imageSource} price={produit.price} />;
-    })}
+      // return <Product title={produit.title} imageSource={produit.imageSource} price={produit.price} />;
+      
+      return (
+        <Product {...produit} />
+      )
+})}
   </MenuStyled>
 )
 }
