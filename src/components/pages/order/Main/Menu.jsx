@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { fakeMenu2 } from "../../../../fakeData/fakeMenu";
+import { fakeMenu1, fakeMenu2 } from "../../../../fakeData/fakeMenu";
 import { theme } from "../../../../theme";
 import Product from "./Product";
 
@@ -29,23 +29,6 @@ const MenuStyled = styled.div`
   justify-items: center;
   box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
 
-  .produit {
-    background: red;
-    width: 240px;
-    height: 330px;
-  }
-
-  .image {
-    border: 1px solid fuchsia;
-    width: 100px;
-    height: auto;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .description {
-    border: 1px solid fuchsia;
-  }
+ 
 `;
+
